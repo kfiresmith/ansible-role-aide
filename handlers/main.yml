@@ -1,0 +1,5 @@
+---
+# handlers file for kfiresmith.aide
+
+- name: Update AIDE
+  ansible.builtin.shell: aide.wrapper --update

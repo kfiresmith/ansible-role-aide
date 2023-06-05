@@ -1,0 +1,19 @@
+---
+# tasks file for kfiresmith.aide
+- name: Install AIDE package
+  ansible.builtin.package:
+    name: aide
+
+- name: Initialize AIDE
+  ansible.builtin.command:
+    cmd: aideinit
+    creates: /var/lib/aide/aide.db
+
+- name: Template a site customizations rule file
+  ansible.builtin.template:
+    src: 51_site_customizations.j2
+    dest: /etc/aide/aide.conf.d/51_side_customizations
+    mode: '0644'
+    owner: root
+    group: root
+  notify: Update AIDE

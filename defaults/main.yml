@@ -1,0 +1,28 @@
+---
+# defaults file for kfiresmith.aide
+
+aide_site_customization_rules:
+  - '/home/*/bin R'
+  - '/root/bin R'
+  - '!/opt/nessus_agent/etc/nessus'
+  - '!/opt/nessus_agent/etc/nessus/.*'
+  - '!/opt/nessus_agent/lib/nessus/plugins'
+  - '!/opt/nessus_agent/lib/nessus/plugins/.*'
+  - '!/opt/nessus_agent/var/nessus'
+  - '!/opt/nessus_agent/var/nessus/.*'
+  - '!/root'
+  - '!/root/.*'
+  - '!/run/systemd/timesync/synchronized'
+  - '!/tmp/nmh_msg_bus.sock'
+  - '!/var/lib/postfix/smtp_scache.db'
+  - '!/var/lib/sss/db'
+  - '!/var/lib/sss/db/.*'
+  - '!/var/lib/sss/mc/.*'
+  - '!/var/lib/sss/pubconf'
+  - '!/var/lib/sss/pubconf/.*'
+  - '!/var/lib/systemd/timesync/clock'
+  - '!/var/lib/update-notifier/.*'
+  - '!/var/log/audit/audit.log$'
+  - '!/var/log/journal/.*'
+  - '!/var/log/.*'
+  - '!/var/snap/.*'
